@@ -1,0 +1,14 @@
+.DS_Store
+DerivedData/
+build/
+.build/
+dist/
+*.xcuserstate
+xcuserdata/
+.runtime/
+__pycache__/
+*.py[cod]
+*.dSYM/
+*.xcresult/
+*.profraw
+*.profdata
