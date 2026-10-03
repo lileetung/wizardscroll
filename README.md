@@ -12,11 +12,11 @@
 </p>
 
 <p align="center">
-  <strong>v1.0.0</strong> · macOS 14+ · Apple Silicon
+  <strong>v1.0.1</strong> · macOS 14+ · Apple Silicon
 </p>
 
 <p align="center">
-  <a href="https://github.com/lileetung/wizardscroll/releases/latest">Download v1.0.0</a> ·
+  <a href="https://github.com/lileetung/wizardscroll/releases/latest">Download v1.0.1</a> ·
   <a href="#use">How to use</a> ·
   <a href="#models">Models</a> ·
   <a href="#privacy">Privacy</a>
@@ -28,7 +28,7 @@
 
 ## What it does
 
-- **Dictate anywhere.** Press **Right ⌥**, speak, and press it again to insert text at your cursor. Or hold the shortcut while you speak. You can change the shortcut.
+- **Dictate anywhere.** Hold **Right ⌥**, speak, and release to insert text at your cursor. Or switch to pressing once to start and again to stop. You can change the shortcut.
 - **Clean up natural speech.** Remove filler and false starts, add punctuation, and keep your meaning, tone, uncertainty and emphasis.
 - **Run locally.** Speech recognition and text polishing both run on your Mac. Nothing else to install.
 - **Reuse your Ollama models.** If you use [Ollama](https://ollama.com), WizardScroll polishes with the models you already have instead of downloading another one.
@@ -47,10 +47,10 @@ The default polishing rules use Taiwan Traditional Chinese while preserving Engl
 
 ### Get started
 
-1. Download **WizardScroll-1.0.0.dmg** from [GitHub Releases](https://github.com/lileetung/wizardscroll/releases/latest).
+1. Download **WizardScroll-1.0.1.dmg** from [GitHub Releases](https://github.com/lileetung/wizardscroll/releases/latest).
 2. Open the DMG and drag **WizardScroll** into **Applications**.
-3. Open **WizardScroll** from Applications. It prepares its local runtime and downloads the selected models automatically.
-4. Open **Settings → Models** and wait for the green checks beside both models.
+3. Open **WizardScroll** from Applications. Its Settings window opens, and it prepares its local runtime and downloads the selected models automatically.
+4. In **Models**, wait for the green checks beside both models.
 5. In **General → Accessibility → Open Settings**, allow WizardScroll to listen for **Right ⌥** and insert text into other apps. Allow microphone access when you first start dictation.
 
 If setup needs attention, expand **General → Environment check**. Model downloads show progress and offer **Retry download** after a failure.
@@ -58,14 +58,16 @@ If setup needs attention, expand **General → Environment check**. Model downlo
 ## Use
 
 1. Place your cursor in a text field.
-2. Press **Right ⌥** (the Option key on the right) to start recording.
-3. Speak, then press **Right ⌥** again.
+2. Hold **Right ⌥** (the Option key on the right) and speak.
+3. Release **Right ⌥** when you finish.
 
 WizardScroll transcribes, polishes and inserts your text.
 
+To open Settings again, open **WizardScroll** from Applications or choose **Settings…** from its menu bar icon.
+
 Pressing **Right ⌥** with another key, such as ⌥ E to type an accent, does not start dictation, so the key keeps working as Option. **Left ⌥** never starts dictation.
 
-To change the shortcut, click it in **General → Shortcut** and press the new combination. It needs ⌘, ⌥ or ⌃, unless it is an F-key or a right-hand modifier (⌥, ⌘, ⌃ or ⇧) pressed on its own. Set **Recording mode** to **Hold to talk** to record only while the shortcut is held. A tap shorter than 0.3 seconds is ignored.
+To change the shortcut, click it in **General → Shortcut** and press the new combination. It needs ⌘, ⌥ or ⌃, unless it is an F-key or a right-hand modifier (⌥, ⌘, ⌃ or ⇧) pressed on its own. By default, **Recording mode** is **Hold to talk**: it records only while the shortcut is held, and a tap shorter than 0.3 seconds is ignored. Set it to **Press to toggle** to press once to start and again to stop.
 
 If automatic insertion is unavailable, the result stays on your clipboard. Press **⌘V** to paste it. If the text model is still downloading or polishing fails, the original transcript is preserved.
 

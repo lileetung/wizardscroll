@@ -180,7 +180,7 @@ final class AppSettings: ObservableObject {
         self.defaults = defaults
         dictationShortcut = defaults.data(forKey: Key.dictationShortcut)
             .flatMap { try? JSONDecoder().decode(DictationShortcut.self, from: $0) } ?? .default
-        dictationMode = DictationMode(rawValue: defaults.string(forKey: Key.dictationMode) ?? "") ?? .toggle
+        dictationMode = DictationMode(rawValue: defaults.string(forKey: Key.dictationMode) ?? "") ?? .hold
         asrModel = ASRModel(rawValue: defaults.string(forKey: Key.asrModel) ?? "") ?? .fast
         language = DictationLanguage(rawValue: defaults.string(forKey: Key.language) ?? "") ?? .automatic
         if let data = defaults.data(forKey: Key.vocabularyEntries),

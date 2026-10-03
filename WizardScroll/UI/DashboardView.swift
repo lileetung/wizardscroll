@@ -80,22 +80,6 @@ struct DashboardView: View {
             environmentCheckCard
 
             SettingsCard {
-                if case .failure(let message) = appState.phase,
-                   message != DictationError.emptyTranscript.localizedDescription {
-                    HStack(alignment: .top, spacing: 10) {
-                        Image(systemName: "exclamationmark.triangle.fill")
-                            .foregroundStyle(.orange)
-                        VStack(alignment: .leading, spacing: 3) {
-                            Text("Last dictation needs attention").fontWeight(.semibold)
-                            Text(appState.lastFailureDetail.isEmpty ? message : appState.lastFailureDetail)
-                                .font(.caption)
-                                .foregroundStyle(.secondary)
-                                .textSelection(.enabled)
-                            Button("Reveal diagnostics") { appState.revealDiagnostics() }
-                        }
-                    }
-                    Divider()
-                }
                 settingRow("Shortcut", detail: settings.dictationMode.instructions) {
                     ShortcutRecorder(settings: settings, appState: appState)
                 }
