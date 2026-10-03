@@ -427,11 +427,6 @@ final class AppState: ObservableObject {
         _ = paster.copyToClipboard(lastTranscript)
     }
 
-    func revealDiagnostics() {
-        LocalDiagnostics.ensureFileExists()
-        NSWorkspace.shared.activateFileViewerSelecting([LocalDiagnostics.fileURL])
-    }
-
     private func beginRecording() {
         guard !phase.isBusy, !isStartingRecording else { return }
         runtimeState = RuntimeLocator.currentState()
